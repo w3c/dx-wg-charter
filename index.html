@@ -160,22 +160,75 @@
 
       <div id="background" class="background">
         <h2>Motivation and Background</h2>
-        <p><i class="todo">Background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry.</i></p>
+
+        <p class=todo>UPDATE THIS SECTION</p>
+        <ul class=todo>
+          <li>Update history to include the publication of DCAT-3
+          <li>Make it generally shorter
+          <li>Include the motivation for VVD and adopting DataCube
+        </ul>
+
+        <p>Sharing data among researchers, governments and citizens, whether openly or not, requires the provision of metadata. Different communities use different metadata standards to describe their datasets, some of which are highly specialized. At a general level W3C’s Data Catalog Vocabulary, <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, is in widespread use, but so too are <a href="https://ckan.org/">CKAN</a>’s native schema, schema.org's <a href="http://schema.org/Dataset">dataset description</a> vocabulary, <a href="http://www.iso.org/iso/catalogue_detail?csnumber=26020">ISO 19115</a>, <a href="http://www.ddialliance.org/explore-documentation">DDI</a>, <a href="https://sdmx.org/">SDMX</a>, <a href="http://www.eurocris.org/cerif/main-features-cerif">CERIF</a>, <a href="https://www.w3.org/TR/void/" title="Describing Linked Datasets with the VoID Vocabulary">VoID</a>, <a href="http://inspire.ec.europa.eu/index.cfm/pageid/101">INSPIRE</a> and, in the healthcare and life sciences domain, the <a href="https://www.w3.org/TR/hcls-dataset/">Dataset Description vocabulary</a> and <a href="https://github.com/biocaddie/WG3-MetadataSpecifications">DATS</a> (<a href="https://doi.org/10.1101/103143" title="DATS: the data tag suite to enable discoverability of datasets">ref</a>) among others.  This variety is a clear indication that no single vocabulary offers a complete and universally accepted solution. </p>
+
+        <p>DCAT has known gaps in coverage, for example around time series and versions. DCAT has been successful and is in wide use, but these gaps must be addressed if usage is to continue to grow across different communities and the variety of metadata schemas is to reduce.</p>
+
+        <p>Maximizing interoperability between services such as data catalogs, e-Infrastructures and virtual research environments requires not just the use of standard vocabularies but of <em>application profiles</em>. These define how a vocabulary is used, for example by providing cardinality constraints and/or enumerated lists of allowed values such that data can be validated. The development of several application profiles based on DCAT, such as the European Commission's <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/description">DCAT-AP</a> is particularly noteworthy in this regard.</p>
+        <p>Rather than limit the number of metadata standards and application profiles in use, systems should be able to expose and ingest (meta)-data according to multiple standards through transparent and sustainable interfaces. We thus need a mechanism for servers to indicate the available standards and application profiles, and for clients to choose an appropriate one. This leads to the concept of content negotiation by application profile, which is orthogonal to content negotiation by data format and language that is already part of HTTP. A new <a href="https://profilenegotiation.github.io/I-D-Profile-Negotiation/I-D-Profile-Negotiation">Internet Draft on profile negotiation</a> currently under development at IETF with input from the Dataset Exchange Working Group, is based on the <a href="http://profilenegotiation.github.io/I-D-Accept--Schema/I-D-accept-schema"> draft</a> presented at the <a href="https://www.w3.org/2016/11/sdsvoc/report#conneg">SDSVoc workshop</a>. The combination of DXWG's definition of what is meant by "application profile", together with the DXWG view of how clients and servers may interact in different ways based on these profiles, together with this external work will provide a powerful means to exchange data in any format (JSON, RDF, XML etc.) according to declared structures against which the data can be validated.</p>
+        <p>The goals of the working group are to maintain the version 2 of DCAT and extend the standard to version 3 in line with work done to date and the ongoing work on dataset exchange being undertaken by communities more generally, and to develop to a recommendation the work undertaken in the 2017-2019 charter period on content negotiation by profile.</p>
       </div>
 
       <section id="scope" class="scope">
         <h2>Scope</h2>
-        <p><i class="todo">What exactly is in scope, and out of scope.
-          For legal review. Be brief.</i></p>
+        
+        <p class=todo>UPDATE THIS SECTION</p>
+        <ul class=todo>
+          <li>Scope should be <em>much</em> shorter and generic (the specifics are given in the deliverable section)
+          <li>In particular, input documents should <em>not</em> be listed here
+        </ul>
 
+        <p>DCAT is formulated as an RDF vocabulary and is expected to remain so, however, as with all earlier work, the working Group is agnostic about data formats. Methods for expressing DCAT in other (existing) formats are in scope.</p>
+        <p>Government data, scientific research data, industry/enterprise and cultural heritage data, whether shared openly or not, are all explicitly in scope.  The working group will primarily look at cross-domain requirements.</p>
+
+        <section id="input-documents">
+          <h3>Input Documents</h3>
+          <p>The following documents <i>SHOULD</i> be considered by the Working Group as direct inputs to the specifications to be developed.</p>
+
+          <section>
+            <h4>Existing Project Materials</h4>
+            <p>In the course of the first charter period of the Dataset Exchange Working Group material was developed which did not get used in the documents published as recommendations and notes, these include various things on  the <a href="https://github.com/w3c/dxwg">DXWG Github</a> and the <a href="https://www.w3.org/2017/dxwg/wiki/Main_Page">project wiki</a>, but particularly those Github issues marked as <a href="https://github.com/w3c/dxwg/issues?q=is%3Aopen+is%3Aissue+label%3Afuture-work">Future-work</a>.</p>
+          </section>
+          <section>
+            <h4>W3C documents</h4>
+            <ul>
+              <li><a href="https://www.w3.org/TR/2019/CR-vocab-dcat-2-20191003/">DCAT version 2</a> and the <a href="https://www.w3.org/TR/hcls-dataset/">HCLS Community profile</a></li>
+              <li>The <a href="https://www.w3.org/TR/vocab-dqv/">Data Quality</a> and <a href="https://www.w3.org/TR/vocab-duv/">Dataset Usage</a> vocabularies</li>
+              <li>The Smart Data &amp; Smarter Descriptions (SDSVoc) <a href="https://www.w3.org/2016/11/sdsvoc/report">workshop report</a>, in particular the section on content negotiation by application profile.</li>
+              <li><a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Non-W3C documents</h4>
+            <p>DCAT must take account of current practice in many different communities. The following list is therefore not exhaustive.</p>
+            <ul>
+              <li><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/description">DCAT-AP</a> and related work, such as <a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO</a>, <a href="https://www.dati.gov.it/content/dcat-ap-it-v10-profilo-italiano-dcat-ap-0">DCAT-AP-IT</a>, <a href="https://joinup.ec.europa.eu/solution/geodcat-application-profile-data-portals-europe">GeoDCAT-AP</a>, <a href="https://www.dcat-ap.de/">DCAT-AP.de</a> etc. </li>
+              <li><a href="http://schema.org/Dataset">schema.org's dataset description</a> vocabulary;</li>
+              <li>Other related vocabularies such as
+                <a href="http://www.eurocris.org/cerif/main-features-cerif">CERIF</a> (the Common European Research Information Format),
+                <a href="http://wiki.dbpedia.org/projects/dbpedia-dataid">DBpedia DataID</a>,
+                <a href="http://www.ddialliance.org/explore-documentation">DDI</a> (the Data Documentation Initiative),
+                <a href="https://www.datacite.org/">DataCite</a>,
+                <a href="https://www.iotone.com/organization/hypercat/o153">Hypercat</a> etc.</li>
+              <li>The <a href="https://www.force11.org/group/fairgroup/fairprinciples">FAIR Principles</a> (a community-based movement to make data assets findable, accessible, interoperable and reusable).</li>
+              <li id="dsp"><a href="http://dublincore.org/documents/dc-dsp/">Description Set Profiles</a> (constraint language for Dublin Core Application Profiles).</li>
+            </ul>
+          </section>
+        </section>
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
-            <p>The following features are out of scope, and will not be addressed by this working group.</p>
+            <p>The following features are out of scope, and will not be addressed by this Working group.</p>
 
-            <ul class="out-of-scope">
-            </ul>
+            <p>The Dataset Exchange Working Group will not create application profiles or metadata standards that only apply to very specific domains (such as particle physics, accountancy, oncology etc.)</p>
         </section>
-
       </section>
 
       <section id="deliverables">
@@ -183,10 +236,19 @@
           Deliverables
         </h2>
 
-        <p><i class="todo">Updated document status is available on the <a href="https://www.w3.org/groups/wg/dx/publications/">group publication status page</a>. [or link to a page this group prefers to use]</i></p>
+        <p class=todo>UPDATE THIS SECTION</p>
+        <ul class=todo>
+          <li>Update the entry about DCAT to link to DCAT 3 explicitly state "maintenance"
+          <li>Add entry for the maintenance of Data Cube
+          <li>Add non-deliberable around VVD:<ul>
+              <li>Publish technical notes on bindings between VVD and other related W3C and non-W3C standards (DDI-CDI, RDF Data Cube, COW, SSN/SOSA, R2ML, etc).
+              <li>Establish a list of use cases for the use of VVD, possibly in combination with related standards.
+            </ul>
+        </ul>
 
-        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <span class='todo'>Choose one:</span> <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state
-          <span class='todo'>The Working Group intends to publish the latest state of their work as Candidate Recommendation (with Snapshots) and does not intend to advance their documents to Recommendation</span>.</p>
+        <p>Updated document status is available on the <a href="https://www.w3.org/groups/wg/dx/publications">group publication status page</a>.</p>
+
+        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state.
 
         <section id="normative">
           <h3>
@@ -195,41 +257,29 @@
           <p>
             The Working Group will deliver the following W3C normative specifications:
           </p>
-          <p class="todo">Consider making a second list for existing specifications that the group will maintain.</p>
           <dl>
-            <dt id="web-foo" class="spec"><a href="#">Web <i class="todo">[spec name]</i></a></dt>
+            <dt id="dcat3" class="spec"><a href="https://www.w3.org/TR/vocab-dcat-3/">Data Catalog Vocabulary (DCAT) - Version 3</a></dt>
             <dd>
-              <p>This specification defines <i class="todo">[concrete description]</i>.</p>
-
-              <p class="draft-status"><b>Draft state:</b> <i class="todo">[No draft | <a href="#">Use Cases and Requirements</a> | <a href="#">Editor's Draft</a> | <a href="#">Member Submission</a> | <a href="#">Adopted from WG/CG Foo</a> | <a href="#">Working Draft</a>]</i></p>
-              <p class="milestone"><b>Expected completion:</b> <i class="todo">[Q1–4 yyyy]</i></p>
-              <p class="todo">Per <a href="https://www.w3.org/policies/process/#WGCharter">5.2.6</a>, for every Recommendation Track deliverable that continues work on a Working Draft (WD) published under any other Charter (including a predecessor group of the same name), for which there is an existing <a href='https://www.w3.org/policies/process/#exclusion-draft'>Exclusion Draft</a>: </p>
-              <p><b>Adopted Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://www.w3.org/policies/process/#adopted-draft">Adopted Draft</a></span> which will serve as the basis for work on the deliverable.
-              <p><b>Exclusion Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://www.w3.org/policies/process/#exclusion-draft'>Exclusion Draft</a></span>.
-              <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
-              <p><b>Exclusion Draft Charter:</b> The  <span class="todo">stable URL of the <a href='https://www.w3.org/policies/process/#other-charter'>Working Group charter</a></span> under which the most recent Exclusion Draft was published.
+              <p>DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. This document defines the schema and provides examples for its use.</p>
+              <p>An update and expansion of the <a href="https://www.w3.org/TR/vocab-dcat-2/">current DCAT Recommendation</a>. The new version may deprecate features, but <span class="rfc21192">MUST</span> maintain backwards compatibility.</p>
+              <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220111/">Working Draft</a></p>
+              <p class="milestone"><b>Expected completion:</b> Q1 2023</p>
+                <p><b>Adopted Draft:</b> <a href="https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220111/">Data Catalog Vocabulary (DCAT) - Version 3, W3C Working Draft 11 January 2022</a>
+              <p><b>Exclusion Draft:</b> <a href='https://www.w3.org/TR/2020/WD-vocab-dcat-3-20201217/'>Data Catalog Vocabulary (DCAT) - Version 3, W3C Working Draft 17 December 2021</a>.
+                associated <a href='https://www.w3.org/mid/cfe-7714-d5c022bcd7cbefe82175c52dd9ad5a8cf1756fc9@w3.org'>Call for Exclusion</a> on 2020-12-17 ended on 2021-05-16.<br>
+                <b>Exclusion Draft Charter:</b> <a href='https://www.w3.org/2020/02/dx-wg-charter.html'>https://www.w3.org/2020/02/dx-wg-charter.html</a>
             </dd>
-          </dl>
-
-
-        </section>
-
-        <section id="incubation">
-          <!-- If no incubation or not a Working Group, delete the section. -->
-          <h3>
-            Tentative Deliverables
-          </h3>
-          <p>Depending on the incubation progress, interest from multiple implementers, and the consensus
-            of the Group participants, the Working Group may adopt the following documents
-             as Rec-track specifications:</p>
-          <dl>
-            <dt id="web-incubated-foo" class="spec"><a href="#">Web <i class="todo">[spec name]</i></a></dt>
+            <dt id="conneg" class="spec"><a href="https://www.w3.org/TR/dx-prof-conneg/">Content Negotiation by Profile</a></dt>
             <dd>
-              <p>This specification defines <i class="todo">[concrete description]</i>.</p>
-              <p class="draft-status"><b>Draft state:</b>
-                Proposal in <a href=""><i class="todo">[other name]</i> Community Group</a></p>
-            </dd>
-          </dl>
+              <p>This document describes how Internet clients may negotiate for content provided by servers based on data profiles to which the content conforms. This is distinct from negotiating by Media Type or Language: a profile may specify the content of information returned, which may be a subset of the information the responding server has about the requested resource, and may be structured in a specific way to meet interoperability requirements of a community of practice.</p>
+              <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/2019/WD-dx-prof-conneg-20191126/">Working Draft</a></p>
+              <p class="milestone"><b>Expected completion:</b> Not specified</p>
+              <p><b>Adopted Draft:</b> <a href="https://www.w3.org/TR/2019/WD-dx-prof-conneg-20191126/">Content Negotiation by Profile,
+                W3C Working Draft 26 November 2019</a>
+              <p><b>Exclusion Draft:</b> <a href="https://www.w3.org/TR/2018/WD-dx-prof-conneg-20181218/">Content Negotiation by Profile
+                W3C First Public Working Draft 18 December 2018</a>. associated <a href='https://www.w3.org/mid/cfe-6872-53aafdeeba6e25756afd730264ab628bbb0b2e8b@w3.org'>Call for Exclusion</a> on 2018-12-18 ended on 2019-05-17<br>
+                <b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2017/dxwg/charter">https://www.w3.org/2017/dxwg/charter</a></dd>
+            </dl>
         </section>
 
         <section id="ig-other-deliverables">
@@ -240,9 +290,11 @@
             Other non-normative documents may be created such as:
           </p>
           <ul>
-            <li>Use case and requirement documents;</li>
-            <li>Test suite and implementation report for the specification;</li>
-            <li>Primer or Best Practice documents to support web developers when designing applications.</li>
+            <li>A use case and requirements document</li>
+            <li>A test suite for content negotiation by application profile</li>
+            <li>A primer on the uses of DCAT</li>
+            <li>Guidance on publishing application profiles of vocabularies.</li>
+            <li>Subject to its capacity, the working group may choose to develop additional relevant vocabularies in response to community demand.</li>
           </ul>
         </section>
 
@@ -264,14 +316,16 @@
 	  <h2>Success Criteria</h2>
 
     <!-- Testing and interop -->
-	  <p><span class='todo'>Remove this clause if the Group does not intend to move to REC:</span> In order to advance to
+	  <p>In order to advance to
 		  <a href="https://www.w3.org/policies/process/#RecsPR" title="Proposed Recommendation">Proposed Recommendation</a>, each normative specification is expected to have
 		  <a href="https://www.w3.org/policies/process/#implementation-experience">at least two independent interoperable
 			  implementations</a> of every feature defined in the specification, where
 interoperability can be verified by passing open test suites.</p>
-	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
-    <p><span class='todo'>Consider adopting a healthy testing policy, such as:</span>
-      To promote interoperability, all changes made to specifications
+	  <p>There should be testing plans for each specification, starting from the earliest drafts.
+      <!-- the part below is added for this WG, and is based on text from the previous charter-->
+      For vocabularies such as DCAT, QB or VVD, the WG should show that each term is used in multiple catalogs and related systems. As a minimum, evidence will be adduced that each term has been published and consumed independently at least once, although a higher number is expected for the majority of terms.
+    </p>
+    <p>To promote interoperability, all changes made to specifications
       in Candidate Recommendation
       or to features that have deployed implementations
       should have <a href='https://www.w3.org/2019/02/testing-policy.html'>tests</a>.
@@ -282,17 +336,18 @@ interoperability can be verified by passing open test suites.</p>
     <p>Each specification should contain separate sections detailing all known security and
       privacy implications for implementers, Web authors, and end users.</p>
 
+    <!-- The specifications of this group do not define any use-facing technology.
+         Commenting this out:
 	  <p><i class="todo">For specifications of technologies that directly impact user experience, such as content technologies, as well as protocols and APIs which impact content: </i>
 		Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
 		recommendations for maximising accessibility in implementations.</p>
+    -->
 
     <!-- Design principles -->
     <p>This Working Group expects to follow the
     TAG <a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.
     </p>
 
-    <!-- Relevance and momentum -->
-	  <p><span class='todo'>Consider adding this clause if the Group does not intend to move to REC:</span> All new features should have expressions of interest from at least two potential implementors before being incorporated in the specification.</p>
 	</section>
 
       <section id="coordination">
@@ -309,14 +364,24 @@ interoperability can be verified by passing open test suites.</p>
 
         <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
 
-      	<p class="todo">In addition to the above catch-all reference to horizontal review which includes accessibility review, please check with chairs and staff contacts of the <a href="https://www.w3.org/groups/wg/apa/">Accessible Platform Architectures Working Group</a> to determine if an additional liaison statement with more specific information about concrete review issues is needed in the list below.</p>
-
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
+
+          <p class=todo>CHECK THIS SECTION, AND UPDATE IF NECESSARY</p>
+
           <dl>
-            <dt><a href=""><i class="todo">[other name]</i> Working Group</a></dt>
-            <dd><i class="todo">[specific nature of liaison]</i></dd>
+            <dt><a href="https://www.w3.org/community/shex/">Shape Expressions Community Group</a></dt>
+            <dd><p>The work of this CG is of direct relevance to the concept of application profiles.</p></dd>
+            <dt><a href="https://www.w3.org/community/shacl/">SHACL Community Group</a></dt>
+            <dd><p>This CG is continuing work on the W3C <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language</a> Recommendation.  Efforts should be made to liaise with its community.</p></dd>
+
+            <dt><a href="https://www.w3.org/community/schemaorg4datasets/">schema.org for datasets Community Group</a></dt>
+            <dd><p>This CG is clearly of high relevance to the DXWG</p></dd>
+
+            <dt id="odrl"><a href="https://www.w3.org/community/odrl/">Open Digital Rights Language (ODRL) Community Group</a></dt>
+            <dd><p>Ensure that the mechanisms of the W3C <a href="https://www.w3.org/TR/odrl-vocab/">ODRL</a> Recommendation being maintained by the ODRL Community Group for machine readable permissions, obligations, licenses, rights etc. are given due consideration.</p></dd>
           </dl>
+
 
           <p class="issue"><b>Note:</b> Do not list horizontal groups here, only specific WGs relevant to your work.</p>
           <p class="issue"><b>Note:</b> Do not bury normative text inside the liaison section.
@@ -325,9 +390,22 @@ interoperability can be verified by passing open test suites.</p>
 
         <section>
           <h3 id="external-coordination">External Organizations</h3>
+
+          <p class=todo>CHECK THIS SECTION, AND UPDATE IF NECESSARY</p>
+
           <dl>
-            <dt><a href=""><i class="todo">[other name]</i> Working Group</a></dt>
-            <dd><i class="todo">[specific nature of liaison]</i></dd>
+            <dt><a href="https://ec.europa.eu/isa2/">European Commission's ISA Programme</a></dt>
+            <dd>
+                <p>This is the body responsible for interoperability across the EU and whose outputs include various application profiles of DCAT such as <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/description">DCAT-AP</a>, <a href="https://joinup.ec.europa.eu/node/154143/">GeoDCAT-AP</a> and <a href="https://joinup.ec.europa.eu/node/147940">StatDCAT-AP</a>.</p>
+            </dd>
+            <dt><a href="https://www.rd-alliance.org/">Research Data Alliance</a></dt>
+            <dd><p>Many of the issues raised in the DXWG are of direct relevance to work at the RDA around metadata, citation and more. It is important to align and not duplicate effort.</p></dd>
+
+            <dt><a href="https://www.go-fair.org">GO-FAIR</a>, <a href="https://www.force11.org/">FORCE11</a>,  <a href="http://www.codata.org/">CODATA</a> (the International Science Council&apos;s Committee on Data) and <a href="https://fairsharing.org">FAIRsharing.org</a></dt>
+            <dd><p>Findability of data assets is potentially made much easier if there are adequate and interoperable catalogs.  As this is a key goal of the FAIR Principles [FAIR] we need to coordinate with communities such as FORCE11, CODATA, GO-FAIR and FAIRsharing.org.</p></dd>
+
+            <dt><a href="https://www.epos-ip.org">EPOS</a>, the European Plate Observing System</dt>
+            <dd><p>EPOS use DCAT as the basis for their dataset catalog application profile.  Their datasets bring together information on geo-hazards and those geodynamic phenomena (including geo-resources) relevant to the environment and human welfare.  Datasets come from a wide, international community and so are an important route for the working group to gather input and feedback on its deliverables.</p></dd>
           </dl>
         </section>
       </section>
@@ -368,7 +446,7 @@ interoperability can be verified by passing open test suites.</p>
           Most Dataset Exchange Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
         </p>
         <p>
-          This group primarily conducts its technical work  <i class="todo">pick one, or both, as appropriate:</i> on the public mailing list <a id="public-name" href="mailto:public-dxwg-wg@w3.org">public-dxwg-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-dxwg-wg/">archive</a>)
+          This group primarily conducts its technical work  <i class="todo">pick one, or both, as appropriate (NB: the previous charter only mentions the mailing list, but in practice github is being increasingly used, so at least I think we should keep both):</i> on the public mailing list <a id="public-name" href="mailto:public-dxwg-wg@w3.org">public-dxwg-wg@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-dxwg-wg/">archive</a>)
           <i class="todo">or</i> on <a id="public-github" href="https://github.com/w3c/dx-wg-charter">GitHub issues</a>.
           The public is invited to review, discuss and contribute to this work.
         </p>
@@ -391,7 +469,7 @@ interoperability can be verified by passing open test suites.</p>
         <p>
           To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
 
-          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id='cfc'><i class="todo">[pick a duration within:] one week to 10 working days</i></span>, depending on the chair's evaluation of the group consensus on the issue.
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id='cfc'>one week to 10 working days</span>, depending on the chair's evaluation of the group consensus on the issue.
 
           If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
         </p>
@@ -436,8 +514,6 @@ interoperability can be verified by passing open test suites.</p>
           <h3>
             Charter History
           </h3>
-          <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/process/charter.html#extension">Charter Guidebook (section 4)</a>.</p>
-
           <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/policies/process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
 
           <table class="history">
@@ -457,45 +533,119 @@ interoperability can be verified by passing open test suites.</p>
                 </th>
               </tr>
               <tr>
-                <th>
-                  <a class="todo" href="">Initial Charter</a>
+                <th><a href="https://www.w3.org/2017/dxwg/charter">Initial Charter</a></th>
+                <td>2017-05-05</td>
+                <td>2019-06-30</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th><a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2019JulSep/0003.html">Charter Extension</a>
                 </th>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                   2019-07-01
                 </td>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                   2019-12-31
                 </td>
                 <td>
-                  <i class="todo">none</i>
+                   -
+                </td>
+             </tr>
+             <tr>
+                 <th><a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2019JulSep/0003.html">Charter Extension</a>
+                 </th>
+                 <td>
+                    2020-01-01
+                 </td>
+                 <td>
+                    2020-01-31
+                 </td>
+                 <td>
+                    -
+                 </td>
+              </tr>
+              <tr>
+                 <th>
+                   <a href="https://www.w3.org/2020/02/dx-wg-charter.html">Rechartered</a>
+                 </th>
+                 <td>
+                   2020-02-05
+                 </td>
+                 <td>
+                   2022-01-31
+                 </td>
+                 <td>
+                   <p>DCAT 3, new document license</p>
+                 </td>
+               </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2022AprJun/0023.html">Charter Extension</a>
+                </th>
+                <td>
+                  2022-02-05
+                </td>
+                <td>
+                  2022-06-30
+                </td>
+                <td>
+                  -
                 </td>
               </tr>
               <tr>
                 <th>
-                  <a class="todo" href="">Charter Extension</a>
+                  <a href="https://www.w3.org/2022/06/dx-wg-charter.html">Rechartered</a>
                 </th>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  2022-06-28
                 </td>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  2024-06-30
                 </td>
                 <td>
-                  <i class="todo">none</i>
+                  Use Patent Policy 2020. Changed in Team FTE (+0.1%)
                 </td>
               </tr>
               <tr>
                 <th>
-                  <a class="todo" href="">Rechartered</a>
+                  <a href="https://lists.w3.org/Archives/Public/public-new-work/2024Jun/0003.html">Charter Extension</a>
                 </th>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  2024-07-01
                 </td>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  2024-12-31
                 </td>
                 <td>
-                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                  -
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Public/public-new-work/2025Feb/0004.html">Charter Extension</a>
+                </th>
+                <td>
+                  2025-01-01
+                </td>
+                <td>
+                  2025-06-30
+                </td>
+                <td>
+                  -
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <i class='todo'><a href="">Rechartered</a></i>
+                </th>
+                <td>
+                  <i class='todo'>TBD</i>
+                </td>
+                <td>
+                <td>
+                  <i class='todo'>TBD</i>
+                </td>
+                <td>
                 </td>
               </tr>
             </tbody>
@@ -520,11 +670,10 @@ interoperability can be verified by passing open test suites.</p>
     <hr>
 
     <footer>
-      <address>
-        <i class="todo"><a href="mailto:">[team contact name]</a></i>
-      </address>
+      <address><a href="mailto:pierre-antoine@w3.org">Pierre-Antoine Champin</a></address>
 
-<p class="copyright">Copyright © <i class="todo">[yyyy]</i> <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+<p class="copyright">Copyright © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+2
   <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
   <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
   <a href="https://www.w3.org/policies/#trademarks">trademark</a> and
