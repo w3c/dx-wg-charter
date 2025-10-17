@@ -80,7 +80,7 @@
       <!-- the link to the group is ALWAYS that available from https://www.w3.org/groups/wg or https://www.w3.org/groups/ig because each group page can then point to a different homepage, but not the other way around. -->
 
       <ul>
-        <li>Develop a W3C Recommendation for the interoperable exchange of dataset variable information on the Web.</li>
+        <li>Develop a W3C Recommendation for the interoperable exchange on the Web of information on datasets at the variable level (Variable Description Vocabulary, VVD).</li>
         <li>Maintain and revise the RDF Data Cube Vocabulary, QB, taking into account feature requests from the QB user community.</li>    
         <li>Maintain and revise the Data Catalog Vocabulary, DCAT, taking into account feature requests from the DCAT user community.</li>
         <li>Define and publish guidance on the specification and use of application profiles when requesting and serving data on the Web.</li></ul>
@@ -165,13 +165,13 @@
           <li>Include the motivation for VVD and adopting DataCube
         </ul> -->
 
-        <p>Sharing data among researchers, governments and citizens, whether openly or not, requires the provision of metadata. Different communities use different metadata standards to describe their datasets, some of which are highly specialized. At a general level W3C’s Data Catalog Vocabulary, <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, is in widespread use, but so too are <a href="https://ckan.org/">CKAN</a>’s native schema, schema.org's <a href="http://schema.org/Dataset">dataset description</a> vocabulary, <a href="http://www.iso.org/iso/catalogue_detail?csnumber=26020">ISO 19115</a>, <a href="http://www.ddialliance.org/explore-documentation">DDI</a>, <a href="https://sdmx.org/">SDMX</a>, <a href="http://www.eurocris.org/cerif/main-features-cerif">CERIF</a>, <a href="https://www.w3.org/TR/void/" title="Describing Linked Datasets with the VoID Vocabulary">VoID</a>, <a href="http://inspire.ec.europa.eu/index.cfm/pageid/101">INSPIRE</a> and, in the healthcare and life sciences domain, the <a href="https://www.w3.org/TR/hcls-dataset/">Dataset Description vocabulary</a> and <a href="https://github.com/biocaddie/WG3-MetadataSpecifications">DATS</a> (<a href="https://doi.org/10.1101/103143" title="DATS: the data tag suite to enable discoverability of datasets">ref</a>) among others. The machine learning, AI, and scientific data communities have recently proposed <a href="https://mlcommons.org/working-groups/data/croissant/">Croissant</a> and <a href="https://www.researchobject.org/ro-crate/">RO-Crates</a> for similar purposes. This variety is a clear indication that no single vocabulary offers a complete and universally accepted solution. </p>
+        <p>Sharing data among researchers, governments and citizens, whether openly or not, requires the provision of metadata. Different communities use different metadata standards to describe their datasets, some of which are highly specialized. At a general level W3C’s Data Catalog Vocabulary, <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a>, is in widespread use, but so too are <a href="https://ckan.org/">CKAN</a>’s native schema, schema.org's <a href="http://schema.org/Dataset">dataset description</a> vocabulary, <a href="http://www.iso.org/iso/catalogue_detail?csnumber=26020">ISO 19115</a>, <a href="http://www.ddialliance.org/explore-documentation">DDI</a>, <a href="https://sdmx.org/">SDMX</a>, <a href="https://huggingface.co/docs/hub/en/datasets-cards">Hugging Face's Dataset Cards</a>, <a href="http://www.eurocris.org/cerif/main-features-cerif">CERIF</a>, <a href="https://www.w3.org/TR/void/" title="Describing Linked Datasets with the VoID Vocabulary">VoID</a>, <a href="http://inspire.ec.europa.eu/index.cfm/pageid/101">INSPIRE</a> and, in the healthcare and life sciences domain, the <a href="https://www.w3.org/TR/hcls-dataset/">Dataset Description vocabulary</a> and <a href="https://github.com/biocaddie/WG3-MetadataSpecifications">DATS</a> (<a href="https://doi.org/10.1101/103143" title="DATS: the data tag suite to enable discoverability of datasets">ref</a>) among others. The machine learning, AI, and scientific data communities have recently proposed <a href="https://mlcommons.org/working-groups/data/croissant/">Croissant</a> and <a href="https://www.researchobject.org/ro-crate/">RO-Crates</a> for similar purposes, with an increasing trend of including more fine-grained metadata at the variable level for the machine-actionability of ML/AI models and agents.</p>
 
-        <p>A success of a previous WG charter was the publication of DCAT-3, which evolved through multiple drafts to improve clarity, extend functionality, and align with best practices. In particular, it introduced dataset series as first-class entities, refined versioning and inverse property handling, enhanced multilingual and accessibility support, improved alignment with external standards, and strengthened guidance on security, privacy, and metadata usage. </p>
+        <!-- <p>, which evolved through multiple drafts to improve clarity, extend functionality, and align with best practices. In particular, it introduced dataset series as first-class entities, refined versioning and inverse property handling, enhanced multilingual and accessibility support, improved alignment with external standards, and strengthened guidance on security, privacy, and metadata usage. </p> -->
 
-        <p>However, despite all those improvements, DCAT has known gaps in coverage, for example in describing the variables encoded within datasets in an explicitily and semantically interoperable manner. Variables are a fundamental concept in both dataset design and dataset search, partly covered in existing recommendations like the <a href="https://www.w3.org/TR/tabular-metadata/">Metadata Vocabulary for Tabular Data</a> (used to annotate tabular data) and the <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube Vocabulary</a>, QB, (used to describe statistical data and time series). While these recommendations have also been successful and are in wide use, this gap must be addressed if usage is to continue to grow across different communities and the variety of metadata schemas is to be reduced.</p>
+        <p>Despite the success of the previous WG charter in publishing DCAT-3, the growing ecosystem of standards towards data AI readiness shows that there is a need for describing the variables encoded within datasets in an explicitily and semantically interoperable manner. Variables are a fundamental concept in dataset design, dataset search and model training and compositionality. Variable descriptions are partly covered in existing recommendations like the <a href="https://www.w3.org/TR/tabular-metadata/">Metadata Vocabulary for Tabular Data</a> (used to annotate tabular data) and the <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube Vocabulary</a>, QB, (used to describe statistical data and time series). While these recommendations have  been successful and are in wide use, this gap must be addressed to guarantee adoption across different communities, including automated agents.</p>
 
-        <p>One goal of this Working Group is to develop a new model for machine-actionable and interoperable dataset variable specifications, extending DCAT and QB for compatibility. Another goal is to maintain the version 3 of DCAT and the QB, as these vocabularies are key components of the W3C's approach to dataset exchange and their maintenance is essential for ensuring their relevance and usefulness to the community.</p>
+        <p>The goal of this Working Group is to develop the Variable Description Vocabulary (VVD), a new model for machine-actionable and interoperable dataset variable specifications, enabling users to semantically describe variables contained in datasets and their relationships. The WG will also maintain DCAT and QB and ensure their compatibility with VVD; as well as addressing any raised errata for ensuring their relevance and usefulness to the community.</p>
       </div>
 
       <section id="scope" class="scope">
@@ -209,6 +209,7 @@
             <h4>Non-W3C documents</h4>
             <p>The WG must take account of current practice in many different communities. The following list is therefore not exhaustive.</p>
             <ul>
+              <li><a href="https://ddialliance.org/ddi-cdi">DDI-CDI</a> (DDI Cross-Domain Integration)</li>
               <li><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/description">DCAT-AP</a> and related work, such as <a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO</a>, <a href="https://www.dati.gov.it/content/dcat-ap-it-v10-profilo-italiano-dcat-ap-0">DCAT-AP-IT</a>, <a href="https://joinup.ec.europa.eu/solution/geodcat-application-profile-data-portals-europe">GeoDCAT-AP</a>, <a href="https://www.dcat-ap.de/">DCAT-AP.de</a> etc. </li>
               <li><a href="http://schema.org/Dataset">schema.org's dataset description</a> vocabulary;</li>
               <li>Other related vocabularies such as
@@ -258,6 +259,18 @@
             The Working Group will deliver the following W3C normative specifications:
           </p>
           <dl>
+            <dt id="vvd" class="spec">Variable Description Vocabulary (VVD)</a></dt>
+            <dd>
+              <p>VVD is an RDF vocabulary designed to semantically describe variables contained in datasets and their relationships, facilitating their interoperability across datasets, discoverability, and use by automated agents. This document defines its data model and provides usage examples.</p>
+              <p>This is a new specification, building on the experience and models of related standards, to address the need for a standard way to describe dataset variables.</p>
+              <p class="draft-status"><b>Draft state:</b> None</p>
+              <p class="input-documents"><b>Input document(s):</b> <a href="https://ddialliance.org/ddi-cdi">DDI-CDI</a></p>
+              <p class="milestone"><b>Expected completion:</b> START+24M</p>
+              <!--   <p><b>Adopted Draft:</b> <a href="https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220111/">Data Catalog Vocabulary (DCAT) - Version 3, W3C Working Draft 11 January 2022</a>
+              <p><b>Exclusion Draft:</b> <a href='https://www.w3.org/TR/2020/WD-vocab-dcat-3-20201217/'>Data Catalog Vocabulary (DCAT) - Version 3, W3C Working Draft 17 December 2021</a>.
+                associated <a href='https://www.w3.org/mid/cfe-7714-d5c022bcd7cbefe82175c52dd9ad5a8cf1756fc9@w3.org'>Call for Exclusion</a> on 2020-12-17 ended on 2021-05-16.<br>
+                <b>Exclusion Draft Charter:</b> <a href='https://www.w3.org/2020/02/dx-wg-charter.html'>https://www.w3.org/2020/02/dx-wg-charter.html</a> -->
+            </dd>
             <dt id="dcat3" class="spec"><a href="https://www.w3.org/TR/vocab-dcat-3/">Data Catalog Vocabulary (DCAT) - Version 3</a></dt>
             <dd>
               <p>DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. This document defines the schema and provides examples for its use.</p>
@@ -280,7 +293,7 @@
                 associated <a href='https://www.w3.org/mid/cfe-7714-d5c022bcd7cbefe82175c52dd9ad5a8cf1756fc9@w3.org'>Call for Exclusion</a> on 2020-12-17 ended on 2021-05-16.<br>
                 <b>Exclusion Draft Charter:</b> <a href='https://www.w3.org/2020/02/dx-wg-charter.html'>https://www.w3.org/2020/02/dx-wg-charter.html</a> -->
             </dd>
-            <dt id="conneg" class="spec"><a href="https://www.w3.org/TR/dx-prof-conneg/">Content Negotiation by Profile</a></dt>
+            <!-- <dt id="conneg" class="spec"><a href="https://www.w3.org/TR/dx-prof-conneg/">Content Negotiation by Profile</a></dt>
             <dd>
               <p>This document describes how Internet clients may negotiate for content provided by servers based on data profiles to which the content conforms. This is distinct from negotiating by Media Type or Language: a profile may specify the content of information returned, which may be a subset of the information the responding server has about the requested resource, and may be structured in a specific way to meet interoperability requirements of a community of practice.</p>
               <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/2023/WD-dx-prof-conneg-20231002/">Working Draft</a></p>
@@ -289,7 +302,8 @@
                 W3C Working Draft 26 November 2019</a>
               <p><b>Exclusion Draft:</b> <a href="https://www.w3.org/TR/2018/WD-dx-prof-conneg-20181218/">Content Negotiation by Profile
                 W3C First Public Working Draft 18 December 2018</a>. associated <a href='https://www.w3.org/mid/cfe-6872-53aafdeeba6e25756afd730264ab628bbb0b2e8b@w3.org'>Call for Exclusion</a> on 2018-12-18 ended on 2019-05-17<br>
-                <b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2017/dxwg/charter">https://www.w3.org/2017/dxwg/charter</a></dd>
+                <b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2017/dxwg/charter">https://www.w3.org/2017/dxwg/charter</a>
+              </dd> -->
             </dl>
         </section>
 
@@ -301,13 +315,24 @@
             Other non-normative documents may be created such as:
           </p>
           <ul>
-            <li>A specification for the variable description vocabulary (VVD)</li>
             <li>A use case and requirements document for the use of VVD, possibly in combination with related standards.</li>
             <li>Technical notes on bindings between VVD and other related W3C and non-W3C standards (DDI-CDI, RDF Data Cube, COW, SSN/SOSA, R2ML, etc)</li>
-            <li>A test suite for content negotiation by application profile</li>
             <!-- <li>A primer on the uses of DCAT</li> -->
-            <li>Guidance on publishing application profiles of vocabularies.</li>
             <li>Subject to its capacity, the working group may choose to develop additional relevant vocabularies in response to community demand.</li>
+          </ul>
+        </section>
+
+        <section id="ig-tentative-deliverables">
+          <h3>
+            Tentative Deliverables
+          </h3>
+          <p>
+            Depending on the interest and availability of Working Group participants, the Working Group may also consider:
+          </p>
+          <ul>
+            <li>Republishing the <a href="https://www.w3.org/TR/dx-prof/">Profiles Vocabulary</a> (PROF) <a href="https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/">Working Group Note</a> as a Rec-track document</li>
+            <li>Finalizing the publication of the <a href="https://www.w3.org/TR/dx-prof-conneg/">Content Negotiation by Profile</a> (ConnegP) Rec-track document</li>
+            <li>A Working Group note providing guidance for publishing application profiles of vocabularies</li>
           </ul>
         </section>
 
@@ -315,13 +340,13 @@
           <h3>Timeline</h3>
             <!-- <p class="todo">Put here a timeline view of all deliverables.</p> -->
             <ul>
-              <li>September 2025: First teleconference</li>
-              <li>November 2025: First face-to-face meeting</li>
-              <li>April 2026: Requirements and Use Cases for VVD</li>
-              <li>August 2026: FPWD for VVD</li>
-              <li>November 2026: Second face-to-face meeting</li>
-              <li>April 2027: Bindings between VVD and other W3C/non-W3C specifications</li>
-              <li>August 2027: Guidance on publishing variable descriptions with VVD</li>
+              <li>START: First teleconference</li>
+              <li>START+2M: First face-to-face meeting</li>
+              <li>START+7M: Requirements and Use Cases for VVD</li>
+              <li>START+11M: FPWD for VVD</li>
+              <li>START+15M: Second face-to-face meeting</li>
+              <li>START+20M: Bindings between VVD and other W3C/non-W3C specifications</li>
+              <li>START+24M: Guidance on publishing variable descriptions with VVD</li>
             </ul>
         </section>
       </section>
@@ -436,6 +461,10 @@ interoperability can be verified by passing open test suites.</p>
 
             <dt><a href="https://www.epos-ip.org">EPOS</a>, the European Plate Observing System</dt>
             <dd><p>EPOS use DCAT as the basis for their dataset catalog application profile.  Their datasets bring together information on geo-hazards and those geodynamic phenomena (including geo-resources) relevant to the environment and human welfare.  Datasets come from a wide, international community and so are an important route for the working group to gather input and feedback on its deliverables.</p></dd>
+
+            <dt><a href="https://sdmx.org/about-sdmx/">SDMX</a></dt>
+            <dd><p>SDMX, which stands for Statistical Data and Metadata eXchange, is an ISO standard designed to describe statistical data and metadata, normalise their exchange, and improve their efficient sharing across statistical and similar organisations.</p></dd>
+      
           </dl>
         </section>
       </section>
