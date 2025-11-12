@@ -169,7 +169,7 @@
 
         <!-- <p>, which evolved through multiple drafts to improve clarity, extend functionality, and align with best practices. In particular, it introduced dataset series as first-class entities, refined versioning and inverse property handling, enhanced multilingual and accessibility support, improved alignment with external standards, and strengthened guidance on security, privacy, and metadata usage. </p> -->
 
-        <p>Despite the success of the previous WG charter in publishing DCAT-3, the growing ecosystem of standards towards data AI readiness shows that there is a need for describing the variables encoded within datasets in an explicitily and semantically interoperable manner. Variables are a fundamental concept in dataset design, dataset search and model training and compositionality. Variable descriptions are partly covered in existing recommendations like the <a href="https://www.w3.org/TR/tabular-metadata/">Metadata Vocabulary for Tabular Data</a> (used to annotate tabular data) and the <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube Vocabulary</a>, QB, (used to describe statistical data and time series). While these recommendations have  been successful and are in wide use, this gap must be addressed to guarantee adoption across different communities, including automated agents.</p>
+        <p>Variables are a fundamental concept in dataset design, dataset search and model training and compositionality. Despite the success of the previous WG charter in publishing DCAT-3, there is still a need for describing the variables encoded within datasets in an explicitly and semantically interoperable manner. This need is also underlined by the growing ecosystem of standards towards  data AI readiness. Variable descriptions are partly covered in existing recommendations like the <a href="https://www.w3.org/TR/tabular-metadata/">Metadata Vocabulary for Tabular Data</a> (used to annotate tabular data) and the <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube Vocabulary</a>, QB (used to describe statistical data and time series). While these recommendations have been successful and are in wide use, variable descriptions still must be addressed to guarantee adoption across different communities, including automated agents.</p>
 
         <p>The goal of this Working Group is to develop the Variable Description Vocabulary (VVD), a new model for machine-actionable and interoperable dataset variable specifications, enabling users to semantically describe variables contained in datasets and their relationships. The WG will also maintain DCAT and QB and ensure their compatibility with VVD; as well as addressing any raised errata for ensuring their relevance and usefulness to the community.</p>
       </div>
@@ -390,10 +390,22 @@ interoperability can be verified by passing open test suites.</p>
           <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
           to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
 
-        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
+        <section>
+          <h3 id="relationship-with-ddi">Relationship with the DDI Alliance</h3>
+
+          <p>The DDI Alliance and the W3C establish a Working Group within the W3C aimed at producing a Recommendation and other deliverables as described above, which will include significant contributions from both the W3C and DDI (Data Documentation Initiative) communities. The cooperation is done on the basis of a liaison and a formal agreement. The planned deliverables will be endorsed by both organizations. The Working Group will operate under the W3C Patent Policy, and will use the W3C Software and Document license for all its deliverables. Membership in the group will include representatives of W3C member organizations, representatives of DDI Alliance member organizations, and invited experts.
+</p>
+
+          <p>As is now common practice for both organizations, the W3C group will work in public, i.e. it will use a publicly visible mailing list and wiki, and the editor's drafts of its documents will be publicly visible (e.g. on GitHub). To enable write access to these facilities, unless there are specific reasons to the contrary, members of the Working Group who do not represent W3C member organizations will be granted Invited Expert status, with all obligations and privileges, in the WG but without access to member-only resources.
+</p>
+
+        </section>
+        
 
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
+
+          <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
 
           <!-- <p class=todo>CHECK THIS SECTION, AND UPDATE IF NECESSARY</p> -->
 
@@ -434,7 +446,7 @@ interoperability can be verified by passing open test suites.</p>
           <dl>
             <dt><a href="https://ddialliance.org/">DDI Alliance</a></dt>
             <dd>
-                <p>The DDI Alliance is an international membership organization that creates and maintains technical standards for describing research data in the social, demographic, economic, and health sciences such as <a href="https://ddialliance.org/ddi-cdi">DDI Cross-Domain Integration (DDI-CDI)</a>.</p>
+                <p>The DDI Alliance is an international membership organization that creates and maintains technical standards for describing research data in the social, demographic, economic, and health sciences such as <a href="https://ddialliance.org/ddi-lifecycle">DDI Lifecycle</a>. In addition to that, the DDI Alliance published a domain-agnostic specification, <a href="https://ddialliance.org/ddi-cdi">DDI-CDI</a> (DDI Cross-Domain Integration), designed to be used in any domain.</p>
             </dd>
             <dt><a href="https://mlcommons.org/">MLCommons</a></dt>
             <dd>
